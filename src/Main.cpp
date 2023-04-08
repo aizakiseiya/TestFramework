@@ -1,12 +1,19 @@
 #include <vector>
 
+#ifndef _TESTCASE_
+#define _TESTCASE_
 #include "TestCase.h"
+#endif
+
+#ifndef _TESTRESULT_
+#define _TESTRESULT_
 #include "TestResult.h"
+#endif
 
 int main()
 { 
 	// テストケース生成
-	std::vector<TestCase> test = new TestCase();
+	TestCase* test = new TestCase();
 
 	// テスト結果を格納するクラス
 	TestResult result;

@@ -1,0 +1,6 @@
+class TestResult
+{
+public:
+	TestResult() {} ;
+
+};

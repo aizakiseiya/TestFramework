@@ -1,13 +1,14 @@
 CXX = clang++
 CXXFLAGS = -Wall -std=c++17 
-LFLAGS = -Xall
+LFLAGS = -Wall
 
-SRCS = Main.cpp
+SRCS = main.cpp
 OBJS = $(SRCS:.cpp=.o)
-TARGET = testFW
+TARGET = main 
 
 .PHONY: all
 all: $(TARGET)
+
 .PHONY: clean
 clean:
 	rm -rf *.o
