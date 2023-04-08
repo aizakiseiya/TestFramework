@@ -2,7 +2,7 @@ CXX=clang++
 CXXFLAGS=-Wall -std=c++17 
 LFLAGS=-Wall
 
-SRCS=main.cpp TestCase.cpp
+SRCS=main.cpp TestCase.cpp Assertion.cpp
 OBJS=$(SRCS:.cpp=.o)
 TARGET=test.o
 

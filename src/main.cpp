@@ -14,7 +14,7 @@
 int main()
 { 
 	// テストケース生成
-	TestCase* test = new TestCase();
+	TestCase* test = new TestCase("test");
 
 	// テスト結果を格納するクラス
 	TestResult result;
@@ -22,11 +22,10 @@ int main()
 	// テスト実行
 	test->run(result);
 
-	if( result.GetFailCount() == 1 ){
-		std::cout << "OK" << std::endl;
-	} else {
-		std::cout << "NG" << std::endl;
-	}
+	std::cout << result.GetFailCount() << std::endl;
 
+	std::cout << result.GetTestCount() << std::endl;
+	
+	delete test;
 	return 0;
 }

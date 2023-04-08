@@ -1,3 +1,5 @@
+#include <string>
+
 #ifndef _TESTRESULT_
 #define _TESTRESULT_
 #include "TestResult.h"
@@ -11,11 +13,13 @@
 class TestCase
 {
 public:
-	using TestFunc = void(*)(void);
-	TestCase() {} ;
+	
+	TestCase(std::string testName)
+		: testName_(testName) {} ;
 
 	void run(TestResult& result);
 private:
-	TestFunc func_;
+	
+	std::string testName_;
 };
 
