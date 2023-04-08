@@ -1,13 +1,13 @@
-CXX = clang++
-CXXFLAGS = -Wall -std=c++17 
-LFLAGS = -Wall
+CXX=clang++
+CXXFLAGS=-Wall -std=c++17 
+LFLAGS=-Wall
 
-SRCS = main.cpp
-OBJS = $(SRCS:.cpp=.o)
-TARGET = main 
+SRCS=main.cpp TestCase.cpp
+OBJS=$(SRCS:.cpp=.o)
+TARGET=test.o
 
 .PHONY: all
-all: $(TARGET)
+all: $(SRCS) $(TARGET)
 
 .PHONY: clean
 clean:
@@ -17,4 +17,4 @@ $(TARGET): $(OBJS)
 	$(CXX) $(LFLAGS) $(OBJS) -o $@
 
 .cpp.o: 
-	$(CXX) $(CFLAGS) $< -o $@
+	$(CXX) $(CFLAGS) -c $< -o $@
